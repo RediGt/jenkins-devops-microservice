@@ -1,15 +1,42 @@
-node {
-	stage('Build') {
-		echo "Build"
-	}
-	stage('Test') {
-		echo "Test"
-	}
+// 1) SCRIPTED APPROACH (outdated)
+// -----------------------------------
+// node {
+// 	stage('Build') {
+// 		echo "Build"
+// 	}
+// 	stage('Test') {
+// 		echo "Test"
+// 	}
+// }
+
+// 2) SIMPLE DECLARATIVE APPROACH
+// -----------------------------------
+pipeline {
+	agent any // Where the build is going to run
+
+	stages {
+		stage('Build') {
+			steps {
+				echo "Build"
+			}
+		}
+
+		stage('Test') {
+			steps {
+				echo "Test"
+			}
+		}
+
+		stage('Integration Test') {
+			steps {
+				echo "Integration test"
+			}
+		}
+	} 
 }
 
-//SCRIPTED
 
-//DECLARATIVE
+//
 // pipeline {
 // 	agent any
 // 	// agent { docker { image 'maven:3.6.3'} }
