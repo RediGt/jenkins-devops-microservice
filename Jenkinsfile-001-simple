@@ -1,0 +1,14 @@
+// DECLARATIVE APPROACH
+pipeline {
+	agent any // Where the build is going to run
+
+	stages {
+		stage('Build') {
+			steps {
+				echo "Build"
+				echo "Test"
+				echo "Integration test"
+			}
+		}
+	} 
+}
