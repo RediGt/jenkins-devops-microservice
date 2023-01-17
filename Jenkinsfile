@@ -36,7 +36,7 @@ pipeline {
 		failure {
 			echo 'I run when you fail'
 		}
-		unstable {} // When tests fail
-		changed {} // When a status of the build changes (ex: #5 faild -> #6 success)
+		// unstable {} // When tests fail
+		// changed {} // When a status of the build changes (ex: #5 faild -> #6 success)
 	}
 }
