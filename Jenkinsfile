@@ -14,7 +14,7 @@ pipeline {
 			steps {
 				sh 'mvn --version'
 				sh 'docker version'
-				echo "Build"
+				echo "Build TASK"
 				echo "PATH - $PATH" // /opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 				echo "env.PATH - $env.PATH"  // /opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 				echo "BUILD_NUMBER - $env.BUILD_NUMBER" // 16
